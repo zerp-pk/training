@@ -18,7 +18,7 @@ class MarketplaceSettingSeeder extends Seeder
             $files = File::files($marketplaceDir);
             foreach ($files as $file) {
                 if (in_array($file->getExtension(), ['png', 'jpg', 'jpeg', 'gif', 'webp'])) {
-                    $screenshots[] = '/packages/workdo/Training/src/marketplace/' . $file->getFilename();
+                    $screenshots[] = '/packages/local/Training/src/marketplace/' . $file->getFilename();
                 }
             }
         }
@@ -33,7 +33,7 @@ class MarketplaceSettingSeeder extends Seeder
                 'sections' => [
                     'hero' => [
                         'variant' => 'hero1',
-                        'title' => 'Training Module for ERPGo SaaS',
+                        'title' => 'Training Module for Zerp',
                         'subtitle' => 'Streamline your training workflow with comprehensive tools and automated management.',
                         'primary_button_text' => 'Install Training Module',
                         'primary_button_link' => '#install',
@@ -55,19 +55,19 @@ class MarketplaceSettingSeeder extends Seeder
                                 'title' => 'Training Management System',
                                 'description' => 'Comprehensive training management platform that streamlines the entire training lifecycle from planning to completion. Advanced scheduling and resource allocation ensures optimal training delivery and participant engagement.',
                                 'keyPoints' => ['Create and manage training programs', 'Schedule training sessions efficiently', 'Track participant progress', 'Generate detailed training reports'],
-                                'screenshot' => '/packages/workdo/Training/src/marketplace/image1.png'
+                                'screenshot' => '/packages/local/Training/src/marketplace/image1.png'
                             ],
                             [
                                 'title' => 'Trainer & Participant Portal',
                                 'description' => 'Dedicated portals for trainers and participants with role-based access and personalized dashboards. Interactive features enable seamless communication and real-time feedback collection throughout the training process.',
                                 'keyPoints' => ['Trainer profile management', 'Participant enrollment system', 'Interactive feedback collection', 'Real-time communication tools'],
-                                'screenshot' => '/packages/workdo/Training/src/marketplace/image2.png'
+                                'screenshot' => '/packages/local/Training/src/marketplace/image2.png'
                             ],
                             [
                                 'title' => 'Analytics & Performance Tracking',
                                 'description' => 'Advanced analytics dashboard providing comprehensive insights into training effectiveness and participant performance. Data-driven reporting helps optimize training programs and measure ROI on training investments.',
                                 'keyPoints' => ['Performance analytics dashboard', 'Training effectiveness metrics', 'Completion rate tracking', 'ROI measurement tools'],
-                                'screenshot' => '/packages/workdo/Training/src/marketplace/image3.png'
+                                'screenshot' => '/packages/local/Training/src/marketplace/image3.png'
                             ]
                         ]
                     ],

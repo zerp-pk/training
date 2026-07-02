@@ -1,6 +1,6 @@
 {
     "name": "zerp/training",
-    "description": "Description for training package",
+    "description": "Employee training management module for the Zerp ERP platform",
     "type": "library",
     "license": "MIT",
     "require": {},
