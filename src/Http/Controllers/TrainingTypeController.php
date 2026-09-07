@@ -33,7 +33,7 @@ class TrainingTypeController extends Controller
                 ->when(request('name'), fn($q) => $q->where('name', 'like', '%' . request('name') . '%'))
                 ->when(request('branch_id'), fn($q) => $q->where('branch_id', request('branch_id')))
                 ->when(request('department_id'), fn($q) => $q->where('department_id', request('department_id')))
-                ->when(request('sort'), fn($q) => $q->orderBy(request('sort'), request('direction', 'asc')), fn($q) => $q->latest())
+                ->when(request('sort'), fn($q) => $q->sortSafe(request('sort'), request('direction'), 'created_at', 'desc'), fn($q) => $q->latest())
                 ->paginate(request('per_page', 10))
                 ->withQueryString();
 
